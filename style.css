@@ -1,0 +1,62 @@
+body {
+    font-family: Arial;
+    background: #f2f2f2;
+}
+
+.login-box, .container {
+    width: 450px;
+    margin: 40px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+input, textarea, select, button {
+    width: 100%;
+    margin-top: 6px;
+    padding: 8px;
+}
+
+.input-area {
+    display: flex;
+    gap: 5px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.progress {
+    height: 8px;
+    background: #ddd;
+    margin: 8px 0;
+}
+
+#progressBar {
+    height: 8px;
+    background: green;
+    width: 0%;
+}
+
+li {
+    list-style: none;
+    background: #eee;
+    padding: 10px;
+    margin-top: 5px;
+    border-left: 5px solid gray;
+}
+
+li.high { border-color: red; }
+li.medium { border-color: orange; }
+li.low { border-color: green; }
+li.done {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.logout {
+    background: crimson;
+    color: white;
+}
