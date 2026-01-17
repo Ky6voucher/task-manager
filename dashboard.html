@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard | Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1 id="userTitle"></h1>
+
+    <!-- STATISTIK -->
+    <div class="stats">
+        <span id="totalTask"></span>
+        <span id="doneTask"></span>
+        <span id="pendingTask"></span>
+    </div>
+
+    <!-- PROGRESS -->
+    <div class="progress">
+        <div id="progressBar"></div>
+    </div>
+
+    <!-- FILTER & SORT -->
+    <div class="controls">
+        <select onchange="setFilter(this.value)">
+            <option value="all">Semua</option>
+            <option value="pending">Belum</option>
+            <option value="done">Selesai</option>
+            <option value="high">Prioritas Tinggi</option>
+        </select>
+
+        <select onchange="sortTask(this.value)">
+            <option value="deadline">Urut Deadline</option>
+            <option value="priority">Urut Prioritas</option>
+        </select>
+    </div>
+
+    <!-- INPUT TASK -->
+    <input id="taskTitle" placeholder="Judul tugas">
+    <textarea id="taskDesc" placeholder="Deskripsi"></textarea>
+
+    <div class="input-area">
+        <input type="datetime-local" id="taskDeadline">
+        <select id="taskPriority">
+            <option>Low</option>
+            <option>Medium</option>
+            <option>High</option>
+        </select>
+        <input id="taskCategory" placeholder="Kategori">
+        <button onclick="addTask()">Tambah</button>
+    </div>
+
+    <ul id="taskList"></ul>
+
+    <button class="logout" onclick="logout()">Logout</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
